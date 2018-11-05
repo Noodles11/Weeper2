@@ -1,0 +1,104 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: rgb(244,244,244);
+	font-family: Verdana, Tahoma, Arial;
+	font-size: 12px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+canvas {
+	position: fixed;
+	background-color: rgb(255,255,255);
+	top:50px;
+	left:0;
+}
+
+#pause {
+	position: fixed;
+	width: 400px;
+	height: 100%;
+	top:0;
+	right:0;
+	background-color: rgba(255,255,255,0.7);
+	z-index: 100;
+	box-shadow: 0px 0px 10px black;
+}
+#pause > span {
+	position: absolute;
+	top: 100px;
+	left:50px;
+	font-size: 50px;
+	color: darkred;
+}
+#info {
+	position: absolute;
+	top: 160px;
+	left:50px;
+	padding: 20px;
+	border: 2px solid lightgray;
+}
+
+#stats {
+	position: fixed;
+	top:0;
+	left:0;
+	height: 50px;
+	width: 100%;
+	background-color: rgb(244,244,244);
+	padding: 10px;
+	box-sizing: border-box;
+}
+#stats > ul > li {
+	display: inline;
+	margin-right: 10px;
+	border: 1px solid lightgray;
+	padding: 5px 8px;
+	position: relative;
+	float: left;
+}
+#stats > ul > li.stat {
+	width:200px;
+}
+#stats > ul > li.system {
+	width:100px;
+}
+#stats > ul > li::before {
+	content: attr(alt);
+	position: absolute;
+	top:5px;
+	right:8px;
+	z-index: -1;
+	color: lightgray;
+	text-transform: uppercase;
+}
+#stats > ul > li.stat::after {
+	content: " / "attr(max);
+}
+
+#stats > ul > li.stat > dp {
+
+}
+#stats > ul > li.stat > dv {
+	position: absolute;
+	left: 0;
+	bottom:0;
+	height:5px;
+	background-color: gray;
+	z-index: -1;
+}
+
+
+#underGame {
+	position: absolute;
+	z-index: -100;
+	top:200px;
+	left: 50px;
+	font-size: 20px;
+	color: red;
+}

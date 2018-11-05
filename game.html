@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="jquery-2.1.1.min.js"></script>
+	<script src="script.js"></script>
+	<script src="weapons.js"></script>
+	<script src="items.js"></script>
+	<script src="mobs.js"></script>
+	<script src="graphics.js"></script>
+	<title>Jaack Game</title>
+</head>
+<body>
+
+<div id="pause">
+	<span>PAUZA</span>
+
+	<div id="info">
+		<p>W,S,A,D - chodzenie</p>
+		<p>strzałki - strzelanie</p>
+		<p>spacja - PAUZA/START</p>
+	</div>
+</div>
+
+<div id="stats">
+	<ul>
+		<li class="stat" id="myHP" alt="HP" max="0"><dp>0</dp><dv style="background-color: red;"></dv></li>
+		<li class="stat" id="myMP" alt="MP" max="0"><dp>0</dp><dv style="background-color: blue;"></dv></li>
+		<li class="stat" id="myEXP" alt="EXP" max="0"><dp>0</dp><dv style="background-color: gold;"></dv></li>
+		<li class="system" id="gameTime" alt="game time">0:0</li>
+	</ul>
+</div>
+
+<canvas id="canvas" width="900" height="400"></canvas>
+<div id="underGame">ZGINĄŁEŚ! Następnym razem uważaj!</br></br><a href="#" onclick="restart();">-- zamknij --</a></div>
+
+</body>
+</html>
